@@ -3,73 +3,189 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.cc">
+        <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
-
+        <title>Orb Farm Research Project</title>
+        <link rel="icon" type="image/gif" href="favicons/daphniaAlpha.gif">
     </head>
 
-    <body>
-        <h2>
-            1) Spend two minutes with the experience and list all of your actions in granular detail.
-        </h2>
-        <p1>
-            Place Sand
-            Sculpt Branches and rocks into a nice landscape
-            Add grass
-            Place water
-            Add Daphnia
-            Add algae to feed them
-            Add some cool fish
-            Add bacteria to break down dead daphnia
-            Look at co2 and oxygen metre
-            Add more algae to balance out the co2
-            Look at info diagram to see how to manage the metre better
-            Periodically place more algae
-            Add more fish 
-        </p1>
-        <h2>
-            2) What was the first thing you paid attention to when interacting with the experience?
-        </h2>
-        <p1>
-            All the items/creatures I could add to the orb farm
-        </p1>
-        <h2>
-            3) What did you spend the most time engaging with?
-        </h2>
-        <p1>
-            Managing the oxygen metre
-        </p1>
-        <h2>
-            4) What was the most common action in your two minute interaction with the experience?
-        </h2>
-        <p1>
-            Adding more algae to increase the oxygen metre
-        </p1>
-        <h2>
-            5) What is your impression of the intended primary goal of the interactive experience?
-        </h2>
-        <p1>
-            Conveys its goal well, it's a tricky balancing act managing the digital ecosystem.
-            Have to constantly add in different species to balance each other while managing the oxygen.
-        </p1>
-        <h2>
-            6) How does the experience communicate it's primary goal?
-        </h2>
-        <p1>
-            The oxygen metre is a measure of success, when it is in the red you know that you are not doing what you are supposed to and 
-            when it is in the middle green you know that you are doing well at balancing the ecosystem.
-        </p1>
-        <h2>
-            7) What is your impression of the intended length of a single interaction and how often you are intended to interact with the experience?
-        </h2>
-        <p1>
-            The length of a single interaction is variable, you can manage the metre or sculpt out an interesting habitat for your creatures.
-            You can also try to add more fish in for more colour. If just managing the metre, the length of a single interaction is only a couple of seconds.
-            When sculpting a habitat, it can take at least 10 seconds.
-            The system can be slowed down and sped up, on fast mode you need to interact with the orb constantly to manage the metre. 
-            On slow you can be more relaxed and check in every couple of minutes. 
-        </p1>
+    <body style="background-color:maroon">
+        <div id="heading" class="heading">
+            <div id="Daphnia Left" class="container1">
+                <img src="https://orb.farm/assets/daphniaAlpha.gif" alt="Orb Farm Daphnia Left" width="100%">
+            </div> 
+            <div id="Daphnia Right" class="container2">
+                <div class="flip">
+                    <img src="https://orb.farm/assets/daphniaAlpha.gif" alt="Orb Farm Daphnia Right" width="100%">
+                </div>
+            </div>
+            <h1>Orb Farm Research Project</h1>
+            <div class="line"></div>
+            <div id="OrbFarmImage" class="container3" style="text-align: center;">
+                <img src="orbfarm.png" alt="Orb Farm Website" width="100%"><br>
+                <a href="https://orb.farm/">Link to Orb Farm</a>
+            </div>
+        </div>
+        
+        <!---I put the questions into sections because the sections element is specificaly for grouping like sections together while
+            div is a generic division -->
+        <section id="actions" class="sections">
+            <h3>
+                Spend two minutes with the experience and list all of your actions in granular detail.
+            </h3>
+            <ul>
+                <li>Place Sand</li>
+                <li>Sculpt Branches and Rocks Into A Nice Landscape</li>
+                <li>Add Grass</li>
+                <li>Place Water</li>
+                <li>Add Daphnia</li>
+                <li>Add Algae To Feed Daphnia</li>
+                <li>Add Some Fish</li>
+                <li>Add Bacteria To Break Down Dead Daphnia</li>
+                <li>Look At Co2 And Oxygen Metre</li>
+                <li>Add More Algae To Balance Out The Co2</li>
+                <li>Look At Info Diagram To See How To Manage The Metre Better</li>
+                <li>Periodically Place More Algae</li>
+                <li>Add More Fish </li>
+            <ul>
+        </section>
+        <section id="first-interaction" class="sections">
+            <h3>
+                What was the first thing you paid attention to when interacting with the experience?
+            </h3>
+            <p>
+                All the items/creatures I could add to the orb farm.
+            </p>
+        </section>
+        <section  id="most-time-engage" class="sections">
+            <h3>
+                What did you spend the most time engaging with?
+            </h3>
+            <p>
+                Managing the oxygen metre.
+            </p>
+        </section>
+        <section id="most-common-action" class="sections">
+            <h3>
+                What was the most common action in your two minute interaction with the experience?
+            </h3>
+            <p>
+                Adding more algae to increase the oxygen metre.
+            </p>
+        </section>
+        <section id="goal-impression" class="sections">
+            <h3>
+                What is your impression of the intended primary goal of the interactive experience?
+            </h3>
+            <p>
+                The experience conveys its goal well, it's a tricky balancing act managing the digital ecosystem.
+                Have to constantly add in different species to balance each other while managing the oxygen.
+            </p>
+        </section>
+        <section id="primary-goal-communication" class="sections">
+            <h3>
+                How does the experience communicate it's primary goal?
+            </h3>
+            <p>
+                The oxygen metre is a measure of success, when it is in the red you know that you are not doing what you are supposed to and 
+                when it is in the middle green you know that you are doing well at balancing the ecosystem.
+            </p>
+        </section>
+        <section id="interaction-length" class="sections">
+            <h3>
+                What is your impression of the intended length of a single interaction and how often you are intended to interact with the experience?
+            </h3>
+            <p>
+                The length of a single interaction is variable, you can manage the metre or sculpt out an interesting habitat for your creatures.
+                You can also try to add more fish in for more colour. If just managing the metre, the length of a single interaction is only a couple of seconds.
+                When sculpting a habitat, it can take at least 10 seconds.
+                The system can be slowed down and sped up, on fast mode you need to interact with the orb constantly to manage the metre. 
+                On slow you can be more relaxed and check in every couple of minutes. 
+            </p>
+        </section>
 
+        <section id="metaphor" class="sections">
+            <h3>
+                What metaphor or metaphors does the experience's mental model reference?
+            </h3>
+            <ul>
+                <li>Ocean</li>
+                <li>Orb/Bowl</li>
+                <li>Old Web Browser</li>
+                <li>Pixel Art</li>
+            </ul>
+        </section>
+
+        <section id="reference-emotion" class="sections">
+            <h3>
+                What does this reference suggest about how you should feel and/or act when engaging with it?
+            </h3>
+            <p>
+                The ocean background is calming and helps the user feel more immersed in their sea creature orb farm. 
+                The orb is similar to a fish bowl and makes the user feel as if they are building a real aquarium. 
+                The pixel art and old web browser aesthetic gives it a unique style, it feels almost like an old arcade game, 
+                and it reminds users of projects similar to it like Tamogatchi. 
+            </p>
+        </section>
+
+        <section id="frustrating" class="sections">
+            <h3>
+                What is the most frustrating element of the interaction and what makes it frustrating to you?
+            </h3>
+            <p>
+                A lot of the interactions are adding algae into the orb, this usually requires frantically moving your mouse from side to side to add more. 
+                It would be alot more user friendly if there was a “brush size” option so that you could bulk add elements.
+            </p>
+        </section>
+
+        <section id="satisfying" class="sections">
+            <h3>
+                What is the most satisfying element of the interaction and what makes it satisfying to you?
+            </h3>
+            <p>
+                The pixels dropping into place as you add sand or grass into the orb is visually satisfying. 
+                It makes the experience feel fluid and more immersive than if the pixels were just added exactly where you clicked. 
+                This also lets you have more freedom in placing objects as you don’t have to be super precise, it's a good quality of life 
+                addition.
+            </p>
+        </section>
+
+        <div id="credit" class="credit">
+            <p1>
+                Font used: Mister Pixel By Christophe Badani
+            </p1>
+        </section>
+
+        <!--- Task Definitions
+        <p>
+            <button>
+                Adds a clickable button
+            </button>
+
+            <ul>
+                Creates an unordered list, bullet points
+                <li>Thing 1</li>
+                <li>Thing 2</li>
+                <li>Thing 3</li>
+                <li>Creates a list item that is placed inside ul</li>
+            </ul>
+
+            <ol>
+                Creates an ordered list, numbered
+                <li>Thing 1</li>
+                <li>Thing 2</li>
+                <li>Thing 3</li>
+            </ol>
+            <b> Makes bold text</b><br>
+            <strong>Specifies important text, bolds it</strong><br>
+            <i>Makes text italic</i><br>
+            <em>Emphasizes text, makes it italic</em><br>
+            <del>Strikes out text</del><br>
+            <u>Underlines text</u><br>
+            Text<sup>Superscript text</sup><br>
+            Text<sub>Subscript text</sub>
+        </p>
+        --->
     </body>
 
 </html>
