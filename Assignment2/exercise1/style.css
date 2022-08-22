@@ -1,8 +1,13 @@
+/*This code is designed to replicate Hedra page 25*/
+
+/* I add box sizing so the padding and border is included in all items 
+    width and height.*/
 *{
     box-sizing: border-box;
     margin: 0;
 }
 
+/* Define custom colors and borders */
 :root{
     --color-one: rgb(0,0,0); 
     --color-two: rgb(100,100,100);
@@ -10,7 +15,9 @@
     --color-four: rgb(240,240,240);
     --border-one: dashed 2px white;
 }
-
+/* Create background container grid and set the width and height
+    so that the grid created will be squares. I use repeat to create 
+    n amount of fraction divisions. */
 #grid-container-bg{
     width: 71vw;
     height: 100vw;
@@ -23,12 +30,16 @@
     gap: 15px;
 }
 
+/* Set all grid items to have a border and set the background color of
+    all items*/
 .grid-item-one{
     background-color: var(--color-three);
     border-style: solid;
     border-width: 3px;
 }
 
+/* I remove border edges on certain grid items and add a 
+    border radius on others.  */
 #box-1-1{
     border-bottom: 0;
     border-right: 0;
