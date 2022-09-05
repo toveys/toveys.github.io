@@ -1,0 +1,218 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+:root{
+  /* first two colours come from Kuroi's Manga Pallete Palette */
+  /* https://lospec.com/palette-list/manga-pallete */
+  --col-01:#171219;
+  --col-02:#f2fbeb;
+  /*The link colors are two variations of purple which contrasts with the green*/
+  --col-03:#5252ff;
+  --col-07:#C84FF0;
+  /*I went with a green theme, I used adobe color wheel for a monochromatic pallette*/
+  --col-04:#b6e878;
+  --col-05:#94BD62;
+  --col-06:#67705C;
+  font-size: 16px;
+}
+
+hr{
+  margin-bottom: 20px;
+}
+
+body{
+  padding: 1rem;
+  background-color: var(--col-02);
+  color: var(--col-01);
+  transition: color 1s;
+}
+
+a{
+  color:var(--col-07);
+}
+a:hover{
+  color: var(--col-03);
+}
+
+section{
+  margin-bottom: 2rem;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+figcaption{
+  width: fit-content;
+}
+
+dl ul{
+  margin-bottom: 0;
+}
+
+li{
+  font-size: 1rem;
+}
+
+dd{
+  padding-left: 60px;
+}
+
+li ul{
+  padding-left: 40px;
+}
+
+.img-wrapper{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-img{
+  width: 80%;
+}
+
+.res-columns{
+  column-width: 25rem;
+}
+
+/* Created a Horizontal navigation bar for a cleaner look*/
+#navbar {
+  list-style-type: none;
+  background-color: var(--col-05);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#navsection{
+  float:left;
+}
+#navsection a{
+  display: block;
+  padding: 10px 10px;
+  text-decoration: none;
+  color: var(--col-01);
+}
+
+#navsection a:hover{
+  background-color: var(--col-06);
+  color: var(--col-02);
+}
+
+/*Basic Dropdown menu code I took from W3 schools
+  Makes sure the content dropping down is hidden until you hover over the menu
+  Also makse sure the content is formatted so its not overlapping things it shouldn't*/
+.dropdown {
+  float: left;
+  overflow: hidden; /* Hidden by default */
+}
+
+#settings:hover{
+  color:var(--col-02);
+  background-color: var(--col-06);
+}
+.dropdown:hover{
+  color: var(--col-02);
+  
+}
+.dropdown .dropbtn {
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  color: var(--col-01);
+  padding: 10px 10px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+}
+.dropdown:hover .dropdown-content {display: block;} /* When hovered display the dropdown menu */
+
+/*Fit the button in the dropdown menu*/
+#modeButton{
+  border: none;
+  font-size: 1rem;
+  background-color: var(--col-04);
+  color: var(--col-01);
+  float: none;
+  padding: 10px 10px;
+  display: block;
+  text-align: left;
+  font-family: inherit;
+}
+#modeButton:hover{
+  background-color: var(--col-06);
+}
+
+#backToTop{
+  display: block;
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none;
+  outline: none;
+  background-color: var(--col-05); /* Set a background color */
+  color: var(--col-01); /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+#backToTop:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/* medium devices 600 - 992 */
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+}
+
+/* medium devices 992 + */
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion){
+  a:hover {
+    animation: none;
+  }
+}
