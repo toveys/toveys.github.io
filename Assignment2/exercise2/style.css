@@ -2,6 +2,7 @@
   box-sizing: border-box;
   background-origin: border-box;
   margin: 0;
+  /* Added in smooth scrolling so that clicking on links isn't so jarring*/
   scroll-behavior: smooth;
 }
 
