@@ -13,7 +13,8 @@
   --col-03:#5252ff;
   --col-08:#b6e878;
   /*I thought that for a light mode a green and tan color pallette would 
-    suit a recipe website well since they are "organic" colors and make the website look healthy*/
+    suit a recipe website well since they are "organic" colors and make the website look healthy
+    I also added a dark mode color pallette for more accessibility*/
   --col-01:#94B49F;
   --col-02:#F7EDDB;
   --col-04:#FCF8E8;
@@ -115,6 +116,8 @@ summary {
 #header{
   display: flex;
 }
+/*I made the dark mode button not a button because with a limited number of clickables on the website, it was really distracting.
+Since it is just a link now it isn't so distracting and fits in with the theme of the site  */
 #DarkMode{
   border: none;
   margin-left: auto;
