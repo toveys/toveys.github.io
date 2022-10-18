@@ -10,15 +10,15 @@
     --border-one: dashed 2px white;
 }
 /* Preload level panel images so it doesn't look choppy when they first switch */
-#preload-01 { background: url(/images/level/level-1.png) no-repeat -9999px -9999px; }
-#preload-02 { background: url(/images/level/level-2.png) no-repeat -9999px -9999px; }
-#preload-03 { background: url(/images/level/level-3.png) no-repeat -9999px -9999px; }
-#preload-04 { background: url(/images/level/level-4.png) no-repeat -9999px -9999px; }
-#preload-05 { background: url(/images/level/level-5.png) no-repeat -9999px -9999px; }
-#preload-06 { background: url(/images/level/level-6.png) no-repeat -9999px -9999px; }
-#preload-07 { background: url(/images/level/level-7.png) no-repeat -9999px -9999px; }
-#preload-08 { background: url(/images/level/level-8.png) no-repeat -9999px -9999px; }
-#preload-09 { background: url(/images/level/level-9.png) no-repeat -9999px -9999px; }
+#preload-01 { background: url(./images/level/level-1.png) no-repeat -9999px -9999px; }
+#preload-02 { background: url(./images/level/level-2.png) no-repeat -9999px -9999px; }
+#preload-03 { background: url(./images/level/level-3.png) no-repeat -9999px -9999px; }
+#preload-04 { background: url(./images/level/level-4.png) no-repeat -9999px -9999px; }
+#preload-05 { background: url(./images/level/level-5.png) no-repeat -9999px -9999px; }
+#preload-06 { background: url(./images/level/level-6.png) no-repeat -9999px -9999px; }
+#preload-07 { background: url(./images/level/level-7.png) no-repeat -9999px -9999px; }
+#preload-08 { background: url(./images/level/level-8.png) no-repeat -9999px -9999px; }
+#preload-09 { background: url(./images/level/level-9.png) no-repeat -9999px -9999px; }
 img{
     object-fit: fill;
     width: 100%;
@@ -42,7 +42,7 @@ img{
     height: 15vh;
     background-color: var(--color-three);
     padding-top: 1px;
-    background-image:url(/images/elevator-top.png);
+    background-image:url(./images/elevator-top.png);
     background-size: cover;
 }
 .level-panel{
@@ -57,7 +57,7 @@ img{
 .left{
     grid-area: left;
     background-color: var(--color-three);
-    background-image:url(/images/elevator-side.png);
+    background-image:url(./images/elevator-side.png);
     background-size: cover;
 }
 .centre{
@@ -68,7 +68,7 @@ img{
 .right{
     grid-area: right;
     background-color: var(--color-three);
-    background-image:url(/images/elevator-side.png);
+    background-image:url(./images/elevator-side.png);
     background-size: cover;
     z-index: 1;
     position: relative;
@@ -76,7 +76,7 @@ img{
 .control-panel{
     display: grid;
     background-color:var(--color-two);
-    background-image:url(/images/control-panel.png);
+    background-image:url(./images/control-panel.png);
     background-size: cover;
     width: 201px;
     height: 300px;
@@ -116,7 +116,7 @@ img{
     height:100%;
     width:50%;
     position: absolute;
-    background-image:url(/images/elevator-door.png);
+    background-image:url(./images/elevator-door.png);
     background-size: cover;
 }
 #left-door{
