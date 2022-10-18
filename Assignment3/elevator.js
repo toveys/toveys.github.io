@@ -11,9 +11,16 @@ async function elevator(floor, filterByFloor, filterButton){
     var leftdoor = document.getElementById("left-door");
     var rightdoor = document.getElementById("right-door");
     var blocker = document.getElementById("blocker");
+    var button = document.getElementById("button");
+    var bell = document.getElementById("bell");
+    var door = document.getElementById("door");
+    var elevator = document.getElementById("elevator");
 
+    button.play();
+    button.volume=.6;
     // If the button is a floor button run this
     if(filterByFloor==="floor"){
+        var audio = document.getElementById("audio");
         //If the button is equal to the current floor, then don't go anywhere
         //It wouldn't make much sense to let the user go to the same floor its on
         if(floor == currentFloor){
@@ -35,14 +42,22 @@ async function elevator(floor, filterByFloor, filterButton){
             //Here if the doors are open when a user selects a button, the doors are closed before
             //the elevator starts "moving"
             if(leftdoor.classList.contains('left-door-open')===true){
+                //play the door sound and if there is currently a door sound playing
+                //stop it and reset it before playing it again
+                door.pause();
+                door.currentTime=0;
+                door.play();
                 leftdoor.classList.remove("left-door-open");
                 rightdoor.classList.remove("right-door-open");
             }
             //I set the blocker div to inline to block the user from clicking on an buttons and disturbing the 
             //animation while the elevator moves
             blocker.style.display="inline";
-            //I also make the script wait for 3 secs which is the amount of time the door closing animation runs for
+            //I also make the script wait for 3 secs, plus some start
+            // up time for the elevator sound, 3 sec is the amount of time the door closing animation runs for
             await new Promise(r => setTimeout(r, 3000));
+            elevator.play();
+            await new Promise(r => setTimeout(r, 2000));
             //I run through the array of floor backgrounds and display only the one that matches the floor number of the button
             for(var floorItem of floorBackground){ 
                 if(floorItem.dataset[filterByFloor] === floor){
@@ -81,6 +96,11 @@ async function elevator(floor, filterByFloor, filterButton){
             //I run the door opening animation and set the litup button back to the default inactive mode
             //I also pause the script while the door opens for the same length of time as the animation
             //I then hide the blocker div which means that the user can click on a new button which means the script is ready to run again
+            elevator.pause();
+            elevator.currentTime=0;
+            await new Promise(r => setTimeout(r, 1000));
+            bell.play();
+            door.play();
             leftdoor.classList.add("left-door-open");
             rightdoor.classList.add("right-door-open");
             filterButton.firstElementChild.style.display = "inline";
@@ -94,6 +114,9 @@ async function elevator(floor, filterByFloor, filterButton){
     //This just runs the close door animation as well as
     //causing the button to change when the user clicks down
     if(filterByFloor==="close"){
+        door.pause();
+        door.currentTime=0;
+        door.play();
         leftdoor.classList.remove("left-door-open");
         rightdoor.classList.remove("right-door-open");
         filterButton.firstElementChild.style.display = "none";
@@ -103,6 +126,9 @@ async function elevator(floor, filterByFloor, filterButton){
     //This just runs the open door animation as well as
     //causing the button to change when the user clicks down
     if(filterByFloor==="open"){
+        door.pause();
+        door.currentTime=0;
+        door.play();
         leftdoor.classList.add("left-door-open");
         rightdoor.classList.add("right-door-open");
         filterButton.firstElementChild.style.display = "none";

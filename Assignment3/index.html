@@ -8,6 +8,19 @@
     </head>
 
     <body>
+        <!-- put in all my audio elements that will be called on with javascript -->
+        <audio id="button" src="./audio/button.wav">
+            <!-- Button 04.wav from Freesound.org by JarredGibb https://freesound.org/people/JarredGibb/sounds/219477/ -->
+        </audio>
+        <audio id="bell" src="./audio/bell.wav">
+            <!-- Bell ding 2.wav from Freesound.org by 5ro4 https://freesound.org/people/5ro4/sounds/611112/ -->
+        </audio>
+        <audio id="door" src="./audio/doors.wav">
+            <!-- elevator door and ding from Freesound.org by jamie7001 https://freesound.org/people/jamie7001/sounds/476800/ -->
+        </audio>
+        <audio id="elevator" src="./audio/elevator.wav">
+            <!-- 01 Elevator UP.wav from Freesound.org by soundslikewillem https://freesound.org/people/soundslikewillem/sounds/340747/ -->
+        </audio>
         <!-- create top of the elevator as a div-->
         <div class="elevator-top">
             <!-- create level panel with images of the floor level inside
@@ -37,15 +50,33 @@
                 They are supposed to be kind of surreal, things you would never see getting out of an elevator -->
                 <div class="doors left-door-open" id="left-door"></div>
                 <div class="doors right-door-open" id="right-door"></div>
-                <image class="background" data-floor="1" src="./images/1.jpg"></image>
-                <image class="background" data-floor="2" src="./images/2.jpg" hidden></image>
-                <image class="background" data-floor="3" src="./images/3.jpg" hidden></image>
-                <image class="background" data-floor="4" src="./images/4.jpg" hidden></image>
-                <image class="background" data-floor="5" src="./images/5.jpg" hidden></image>
-                <image class="background" data-floor="6" src="./images/6.jpg" hidden></image>
-                <image class="background" data-floor="7" src="./images/7.jpg" hidden></image>
-                <image class="background" data-floor="8" src="./images/8.jpg" hidden></image>
-                <image class="background" data-floor="9" src="./images/9.jpg" hidden></image>
+                <image class="background" data-floor="1" src="./images/1.jpg">
+                    <!-- Photo by Quark Studio from Pexels: https://www.pexels.com/photo/white-sofas-inside-building-2507010/ -->
+                </image>
+                <image class="background" data-floor="2" src="./images/2.jpg" hidden>
+                    <!-- Photo by Pixabay from Pexels: https://www.pexels.com/photo/red-leaf-trees-near-the-road-33109/ -->
+                </image>
+                <image class="background" data-floor="3" src="./images/3.jpg" hidden>
+                    <!-- Photo by Francesco Ungaro from Pexels: https://www.pexels.com/photo/green-bushes-on-desert-998653/ -->
+                </image>
+                <image class="background" data-floor="4" src="./images/4.jpg" hidden>  
+                    <!-- Photo by eberhard grossgasteiger from Pexels -->
+                </image>
+                <image class="background" data-floor="5" src="./images/5.jpg" hidden>
+                    <!-- Photo by Pixabay from Pexels: https://www.pexels.com/photo/gray-and-brown-mountain-417173/ -->
+                </image>
+                <image class="background" data-floor="6" src="./images/6.jpg" hidden>
+                    <!-- Photo by eberhard grossgasteiger from Pexels: https://www.pexels.com/photo/trees-near-body-of-water-518485/ -->
+                </image>
+                <image class="background" data-floor="7" src="./images/7.jpg" hidden>
+                    <!-- Nature park photo I took -->
+                </image>
+                <image class="background" data-floor="8" src="./images/8.jpg" hidden>
+                    <!-- Photo by Belle Co from Pexels: https://www.pexels.com/photo/photo-of-a-turtle-swimming-underwater-847393/ -->
+                </image>
+                <image class="background" data-floor="9" src="./images/9.jpg" hidden>
+                    <!-- Backrooms meme image with friend's cat -->
+                </image>
             </div>
             <div class="right">
                 <!-- In the right grid item I have a blocker div that is hidden by default. I also have the control panel div
