@@ -11,7 +11,8 @@
         <!-- create top of the elevator as a div-->
         <div class="elevator-top">
             <!-- create level panel with images of the floor level inside
-                I have the floor one level image shown and all the rest hidden -->
+                I have the floor one level image shown and all the rest hidden. The image is meant to represent an LCD display
+                of the floor numbers, and will change depending on what floor the elevator is on -->
             <div class="level-panel">
                 <img class="level" id="preload-01" data-level="1" src="./images/level/level-1.png">
                 <img class="level" id="preload-02" data-level="2" src="./images/level/level-2.png" hidden>
@@ -24,23 +25,31 @@
                 <img class="level" id="preload-09" data-level="9" src="./images/level/level-9.png" hidden>
             </div>
         </div>
-        <!-- create the main elevator div as a grid container, I have the grid split into the slides of the elevator and the middle section -->
+        <!-- create the main elevator div as a grid container, I have the grid split into the slides of the elevator and the middle section.
+            In the css I add a background image to all the main divs, that don't change -->
         <div class="elevator-box">
             <div class="left">
             </div>
             <div class="centre">
                 <!-- In the centre grid item I have all the images of the floor backgrounds with the first floor shown and the 
-                rest hidden. I also have two divs that represent the elevator doors. -->
+                rest hidden. I also have two divs that represent the elevator doors. 
+                The background images are supposed to be non-typical to evoke what I thought I would see when I was a kid in an elevator.
+                They are supposed to be kind of surreal, things you would never see getting out of an elevator -->
                 <div class="doors left-door-open" id="left-door"></div>
                 <div class="doors right-door-open" id="right-door"></div>
                 <image class="background" data-floor="1" src="./images/1.jpg"></image>
                 <image class="background" data-floor="2" src="./images/2.jpg" hidden></image>
                 <image class="background" data-floor="3" src="./images/3.jpg" hidden></image>
                 <image class="background" data-floor="4" src="./images/4.jpg" hidden></image>
+                <image class="background" data-floor="5" src="./images/5.jpg" hidden></image>
+                <image class="background" data-floor="6" src="./images/6.jpg" hidden></image>
+                <image class="background" data-floor="7" src="./images/7.jpg" hidden></image>
+                <image class="background" data-floor="8" src="./images/8.jpg" hidden></image>
+                <image class="background" data-floor="9" src="./images/9.jpg" hidden></image>
             </div>
             <div class="right">
-                <!-- In the right grid item I have a blocker div that is hidden by default. I also have this grid item act as a grid container
-                for what will be the control panel of the elevator -->
+                <!-- In the right grid item I have a blocker div that is hidden by default. I also have the control panel div
+                    inside this grid item act as a grid container for what will be the control panel of the elevator -->
                 <div id="blocker"></div>
                 <div class="control-panel">
                     <!-- I have all the button divs here as grid items with an onclick function.
@@ -82,10 +91,13 @@
                         <img src="./images/buttons/button-9-unlit.png">
                         <img src="./images/buttons/button-9-lit.png" hidden>
                     </div>
+                    <!-- These door open and door close buttons use onmousedown and onmouse up unlike the rest of the other buttons 
+                    since they usually only light up while they are pressed unlike the other buttons which stay lit -->
                     <div class="button" id="close" onmousedown='elevator("null", "close", this);' , onmouseup='unclick("close", this);'>
                         <img src="./images/buttons/button-close-unlit.png">
                         <img src="./images/buttons/button-close-lit.png" hidden>
                     </div>
+                    <!-- There is a space div here that just fills up the grid space -->
                     <div id="space">
                     </div>
                     <div class="button" id="open" onmousedown='elevator("null", "open", this);' , onmouseup='unclick("open", this);'>
@@ -94,9 +106,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
     </body>
-
 </html>
