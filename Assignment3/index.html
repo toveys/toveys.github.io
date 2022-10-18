@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="elevator.js"></script>
+    </head>
+
+    <body>
+        <!-- create top of the elevator as a div-->
+        <div class="elevator-top">
+            <!-- create level panel with images of the floor level inside
+                I have the floor one level image shown and all the rest hidden -->
+            <div class="level-panel">
+                <img class="level" id="preload-01" data-level="1" src="/images/level/level-1.png">
+                <img class="level" id="preload-02" data-level="2" src="/images/level/level-2.png" hidden>
+                <img class="level" id="preload-03" data-level="3" src="/images/level/level-3.png" hidden>
+                <img class="level" id="preload-04" data-level="4" src="/images/level/level-4.png" hidden>
+                <img class="level" id="preload-05" data-level="5" src="/images/level/level-5.png" hidden>
+                <img class="level" id="preload-06" data-level="6" src="/images/level/level-6.png" hidden>
+                <img class="level" id="preload-07" data-level="7" src="/images/level/level-7.png" hidden>
+                <img class="level" id="preload-08" data-level="8" src="/images/level/level-8.png" hidden>
+                <img class="level" id="preload-09" data-level="9" src="/images/level/level-9.png" hidden>
+            </div>
+        </div>
+        <!-- create the main elevator div as a grid container, I have the grid split into the slides of the elevator and the middle section -->
+        <div class="elevator-box">
+            <div class="left">
+            </div>
+            <div class="centre">
+                <!-- In the centre grid item I have all the images of the floor backgrounds with the first floor shown and the 
+                rest hidden. I also have two divs that represent the elevator doors. -->
+                <div class="doors left-door-open" id="left-door"></div>
+                <div class="doors right-door-open" id="right-door"></div>
+                <image class="background" data-floor="1" src="/images/1.jpg"></image>
+                <image class="background" data-floor="2" src="/images/2.jpg" hidden></image>
+                <image class="background" data-floor="3" src="/images/3.jpg" hidden></image>
+                <image class="background" data-floor="4" src="/images/4.jpg" hidden></image>
+            </div>
+            <div class="right">
+                <!-- In the right grid item I have a blocker div that is hidden by default. I also have this grid item act as a grid container
+                for what will be the control panel of the elevator -->
+                <div id="blocker"></div>
+                <div class="control-panel">
+                    <!-- I have all the button divs here as grid items with an onclick function.
+                    Images of the elevator buttons are also in the divs, each div has 2 different images of the buttons, a
+                    pressed button and an unpressed button, with the unpressed button hidden -->
+                    <div class="button ActiveCategory" id="1" onclick='elevator("1", "floor", this)'>
+                        <img src="/images/buttons/button-1-unlit.png">
+                        <img src="/images/buttons/button-1-lit.png" hidden>
+                    </div>
+                    <div class="button" id="2" onclick='elevator("2", "floor", this)'>
+                        <img src="/images/buttons/button-2-unlit.png">
+                        <img src="/images/buttons/button-2-lit.png" hidden>
+                    </div>
+                    <div class="button" id="3" onclick='elevator("3", "floor", this)'>
+                        <img src="/images/buttons/button-3-unlit.png">
+                        <img src="/images/buttons/button-3-lit.png" hidden>
+                    </div>
+                    <div class="button" id="4" onclick='elevator("4", "floor", this)'>
+                        <img src="/images/buttons/button-4-unlit.png">
+                        <img src="/images/buttons/button-4-lit.png" hidden>
+                    </div>
+                    <div class="button" id="5" onclick='elevator("5", "floor", this)'>
+                        <img src="/images/buttons/button-5-unlit.png">
+                        <img src="/images/buttons/button-5-lit.png" hidden>
+                    </div>
+                    <div class="button" id="6" onclick='elevator("6", "floor", this)'>
+                        <img src="/images/buttons/button-6-unlit.png">
+                        <img src="/images/buttons/button-6-lit.png" hidden>
+                    </div>
+                    <div class="button" id="7" onclick='elevator("7", "floor", this)'>
+                        <img src="/images/buttons/button-7-unlit.png">
+                        <img src="/images/buttons/button-7-lit.png" hidden>
+                    </div>
+                    <div class="button" id="8" onclick='elevator("8", "floor", this)'>
+                        <img src="/images/buttons/button-8-unlit.png">
+                        <img src="/images/buttons/button-8-lit.png" hidden>
+                    </div>
+                    <div class="button" id="9" onclick='elevator("9", "floor", this)'>
+                        <img src="/images/buttons/button-9-unlit.png">
+                        <img src="/images/buttons/button-9-lit.png" hidden>
+                    </div>
+                    <div class="button" id="close" onmousedown='elevator("null", "close", this);' , onmouseup='unclick("close", this);'>
+                        <img src="/images/buttons/button-close-unlit.png">
+                        <img src="/images/buttons/button-close-lit.png" hidden>
+                    </div>
+                    <div id="space">
+                    </div>
+                    <div class="button" id="open" onmousedown='elevator("null", "open", this);' , onmouseup='unclick("open", this);'>
+                        <img src="/images/buttons/button-open-unlit.png">
+                        <img src="/images/buttons/button-open-lit.png" hidden>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

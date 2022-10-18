@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+:root{
+    --color-one: rgb(0,0,0); 
+    --color-two: rgb(100,100,100);
+    --color-three: rgb(180,180,180);
+    --color-four: rgb(240,240,240);
+    --border-one: dashed 2px white;
+}
+/* Preload level panel images so it doesn't look choppy when they first switch */
+#preload-01 { background: url(/images/level/level-1.png) no-repeat -9999px -9999px; }
+#preload-02 { background: url(/images/level/level-2.png) no-repeat -9999px -9999px; }
+#preload-03 { background: url(/images/level/level-3.png) no-repeat -9999px -9999px; }
+#preload-04 { background: url(/images/level/level-4.png) no-repeat -9999px -9999px; }
+#preload-05 { background: url(/images/level/level-5.png) no-repeat -9999px -9999px; }
+#preload-06 { background: url(/images/level/level-6.png) no-repeat -9999px -9999px; }
+#preload-07 { background: url(/images/level/level-7.png) no-repeat -9999px -9999px; }
+#preload-08 { background: url(/images/level/level-8.png) no-repeat -9999px -9999px; }
+#preload-09 { background: url(/images/level/level-9.png) no-repeat -9999px -9999px; }
+img{
+    object-fit: fill;
+    width: 100%;
+}
+.level{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+.elevator-box{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-areas:
+    "left centre right";
+    height: 85vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.elevator-top{
+    height: 15vh;
+    background-color: var(--color-three);
+    padding-top: 1px;
+    background-image:url(/images/elevator-top.png);
+    background-size: cover;
+}
+.level-panel{
+    width:150px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    background-color: black;
+    color: red;
+}
+.left{
+    grid-area: left;
+    background-color: var(--color-three);
+    background-image:url(/images/elevator-side.png);
+    background-size: cover;
+}
+.centre{
+    grid-area: centre;
+    z-index: -3;
+    position: relative;
+}
+.right{
+    grid-area: right;
+    background-color: var(--color-three);
+    background-image:url(/images/elevator-side.png);
+    background-size: cover;
+    z-index: 1;
+    position: relative;
+}
+.control-panel{
+    display: grid;
+    background-color:var(--color-two);
+    background-image:url(/images/control-panel.png);
+    background-size: cover;
+    width: 201px;
+    height: 300px;
+    margin:auto;
+    margin-top:120px;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    z-index: 2;
+    position: relative;
+}
+#blocker{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    display: none;
+}
+.button{
+    margin-left: 10px;
+    margin-right:10px;
+    margin-top:15px;
+}
+.button:hover{
+    cursor:pointer;
+}
+.background{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -2;
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+.doors{
+    z-index: -1;
+    height:100%;
+    width:50%;
+    position: absolute;
+    background-image:url(/images/elevator-door.png);
+    background-size: cover;
+}
+#left-door{
+    background-color: beige;
+    top: 0px;
+    left: 0px;
+    transition-duration: 3s;
+}
+#right-door{
+    background-color:beige;
+    top: 0px;
+    right: 0px;
+    transition-duration: 3s;
+}
+
+.left-door-open{
+    transform:translate(-360px);
+}
+.right-door-open{
+    transform:translate(360px);
+}
+.left-door-close{
+    transform:translate(360px);
+}
+.right-door-close{
+    transform:translate(-360px);
+}
