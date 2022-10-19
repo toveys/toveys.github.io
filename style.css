@@ -1,0 +1,236 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+/* Color pallette is just grayscale and is not used unless the website images can't load */
+:root{
+    --color-one: rgb(0,0,0); 
+    --color-two: rgb(100,100,100);
+    --color-three: rgb(180,180,180);
+    --color-four: rgb(240,240,240);
+    --border-one: dashed 2px white;
+}
+/* Preload level panel images so it doesn't look choppy when they first switch */
+#preload-01 { background: url(./images/level/level-1.png) no-repeat -9999px -9999px; }
+#preload-02 { background: url(./images/level/level-2.png) no-repeat -9999px -9999px; }
+#preload-03 { background: url(./images/level/level-3.png) no-repeat -9999px -9999px; }
+#preload-04 { background: url(./images/level/level-4.png) no-repeat -9999px -9999px; }
+#preload-05 { background: url(./images/level/level-5.png) no-repeat -9999px -9999px; }
+#preload-06 { background: url(./images/level/level-6.png) no-repeat -9999px -9999px; }
+#preload-07 { background: url(./images/level/level-7.png) no-repeat -9999px -9999px; }
+#preload-08 { background: url(./images/level/level-8.png) no-repeat -9999px -9999px; }
+#preload-09 { background: url(./images/level/level-9.png) no-repeat -9999px -9999px; }
+
+/* default image settings are configured here to fill their container */
+img{
+    object-fit: fill;
+    width: 100%;
+}
+
+/* Level panel image needs the height modifier to otherwise it gets stretched */
+.level{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+/* The main elevator div is made a grid container here with the columns being different parts of the elevator
+I add an overflow since I don't want there to be any scrolling in my website. Inside all its grid items, I set a background image
+since those images won't be changing, and they are all metallic gradients meant to mimic a different part of the elevator*/
+.elevator-box{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-areas:
+    "left centre right";
+    height: 85vh;
+    width: 100%;
+    overflow: hidden;
+}
+/* I have the top section of the elevator configured here
+to avoid having to move around an image inside it's div, I just set its background image to what I want */
+.elevator-top{
+    height: 15vh;
+    background-color: var(--color-three);
+    padding-top: 1px;
+    background-image:url(./images/elevator-top.png);
+    background-size: cover;
+}
+/* I set the level panel settings here, the margin is set so it is in the center of the elevator */
+.level-panel{
+    width:150px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    background-color: black;
+    color: red;
+}
+/* I give the left, centre, and right grid items the grid-area they should be placed
+I set the z-index of the centre div so that the image and the door are
+in front of it */
+.left{
+    grid-area: left;
+    background-color: var(--color-three);
+    background-image:url(./images/elevator-side.png);
+    background-size: cover;
+}
+.centre{
+    grid-area: centre;
+    z-index: -3;
+    position: relative;
+}
+.right{
+    grid-area: right;
+    background-color: var(--color-three);
+    background-image:url(./images/elevator-side.png);
+    background-size: cover;
+    z-index: 1;
+    position: relative;
+}
+/* The control panel is a grid container for all the buttons, set up to be split into 3 equal columns
+and 4 equal rows and set the z index so that it is infront of the right div  */
+.control-panel{
+    display: grid;
+    background-color:var(--color-two);
+    background-image:url(./images/control-panel.png);
+    background-size: cover;
+    width: 201px;
+    height: 300px;
+    margin:auto;
+    margin-top:120px;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    z-index: 2;
+    position: relative;
+}
+/* Here I have the blocker div that loads infront of the control panel to block the user from interacting
+with it when they aren't supposed to. I set the z-index so that it can load in front of the control panel */
+#blocker{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    display: none;
+}
+/* Here I configure the button divs so that they are equally spaced inside the main div */
+.button{
+    margin-left: 10px;
+    margin-right:10px;
+    margin-top:15px;
+}
+/* I make the cursor change when the user hovers over the button divs, which shows them that
+they are interactable */
+.button:hover{
+    cursor:pointer;
+}
+/* I set the background image z-index so that they are behind the doors and infront of the centre div */
+.background{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -2;
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+/* I set the door class divs z-index so that they are infront of everything in the centre div, but are also behind 
+the left and right divs so that when they are animated they don't cover up anything */
+.doors{
+    z-index: -1;
+    height:100%;
+    width:50%;
+    position: absolute;
+    background-image:url(./images/elevator-door.png);
+    background-size: cover;
+}
+/* I set the door positions here and set the transition duration */
+#left-door{
+    background-color: beige;
+    top: 0px;
+    left: 0px;
+    transition-duration: 3s;
+}
+#right-door{
+    background-color:beige;
+    top: 0px;
+    right: 0px;
+    transition-duration: 3s;
+}
+/* I set these class's transform position, so that I can add these to the 
+door classes in javascript. They are to translate left and right, to act like sliding doors */
+.left-door-open{
+    transform:translate(-450px);
+}
+.right-door-open{
+    transform:translate(450px);
+}
+.left-door-close{
+    transform:translate(450px);
+}
+.right-door-close{
+    transform:translate(-450px);
+}
+/* When views on screens smaller than 1050px, change the width of the control panel and level-panel to retain
+functionality */
+@media only screen and (max-width: 1050px) {
+    .elevator-box{
+        grid-template-columns: 25% 50% 25%;
+    }
+    .control-panel{
+        width: 150px;
+        height: 250px;
+    }
+    .level-panel{
+        width:100px;
+        height: 50px;
+        margin-top: 15px;
+    }
+    .button{
+        margin-left: 5px;
+        margin-right:5px;
+        margin-top:10px;
+    }
+    .left-door-open{
+        transform:translate(-300px);
+    }
+    .right-door-open{
+        transform:translate(300px);
+    }
+    .left-door-close{
+        transform:translate(300px);
+    }
+    .right-door-close{
+        transform:translate(-300px);
+    }
+}
+/* On mobile screens I have uneven columns for the elevator so the user can see the picture better
+and still be able to have a working control panel. Keeping the left side of the elevator equal to the 
+right side isn't worth it if it means removing functionality.
+ */
+@media only screen and (max-width: 600px) {
+    .elevator-box{
+        grid-template-columns: 15% 60% 25%;
+    }
+    .control-panel{
+        width: 101px;
+        height: 200px;
+    }
+    .level-panel{
+        width:100px;
+        height: 50px;
+        margin-top: 15px;
+        margin-left:35%;
+    }
+    .left-door-open{
+        transform:translate(-200px);
+    }
+    .right-door-open{
+        transform:translate(200px);
+    }
+    .left-door-close{
+        transform:translate(200px);
+    }
+    .right-door-close{
+        transform:translate(-200px);
+    }
+}
+
