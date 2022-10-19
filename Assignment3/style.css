@@ -214,6 +214,12 @@ right side isn't worth it if it means removing functionality.
         width: 101px;
         height: 200px;
     }
+    .level-panel{
+        width:100px;
+        height: 50px;
+        margin-top: 15px;
+        margin-left:35%;
+    }
     .left-door-open{
         transform:translate(-200px);
     }
