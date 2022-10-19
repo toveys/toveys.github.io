@@ -10,6 +10,9 @@
     --color-four: rgb(240,240,240);
     --border-one: dashed 2px white;
 }
+body{
+    background-color: var(--color-one);
+}
 /* Preload level panel images so it doesn't look choppy when they first switch */
 #preload-01 { background: url(./images/level/level-1.png) no-repeat -9999px -9999px; }
 #preload-02 { background: url(./images/level/level-2.png) no-repeat -9999px -9999px; }
