@@ -38,7 +38,7 @@ I add an overflow since I don't want there to be any scrolling in my website. In
 since those images won't be changing, and they are all metallic gradients meant to mimic a different part of the elevator*/
 .elevator-box{
     display: grid;
-    grid-template-columns: 25% 50% 25%;
+    grid-template-columns: 20% 60% 20%;
     grid-template-areas:
     "left centre right";
     height: 85vh;
@@ -158,14 +158,73 @@ the left and right divs so that when they are animated they don't cover up anyth
 /* I set these class's transform position, so that I can add these to the 
 door classes in javascript. They are to translate left and right, to act like sliding doors */
 .left-door-open{
-    transform:translate(-360px);
+    transform:translate(-450px);
 }
 .right-door-open{
-    transform:translate(360px);
+    transform:translate(450px);
 }
 .left-door-close{
-    transform:translate(360px);
+    transform:translate(450px);
 }
 .right-door-close{
-    transform:translate(-360px);
+    transform:translate(-450px);
 }
+/* When views on screens smaller than 1050px, change the width of the control panel and level-panel to retain
+functionality */
+@media only screen and (max-width: 1050px) {
+    .elevator-box{
+        grid-template-columns: 25% 50% 25%;
+    }
+    .control-panel{
+        width: 150px;
+        height: 250px;
+    }
+    .level-panel{
+        width:100px;
+        height: 50px;
+        margin-top: 15px;
+    }
+    .button{
+        margin-left: 5px;
+        margin-right:5px;
+        margin-top:10px;
+    }
+    .left-door-open{
+        transform:translate(-300px);
+    }
+    .right-door-open{
+        transform:translate(300px);
+    }
+    .left-door-close{
+        transform:translate(300px);
+    }
+    .right-door-close{
+        transform:translate(-300px);
+    }
+}
+/* On mobile screens I have uneven columns for the elevator so the user can see the picture better
+and still be able to have a working control panel. Keeping the left side of the elevator equal to the 
+right side isn't worth it if it means removing functionality.
+ */
+@media only screen and (max-width: 600px) {
+    .elevator-box{
+        grid-template-columns: 15% 60% 25%;
+    }
+    .control-panel{
+        width: 101px;
+        height: 200px;
+    }
+    .left-door-open{
+        transform:translate(-200px);
+    }
+    .right-door-open{
+        transform:translate(200px);
+    }
+    .left-door-close{
+        transform:translate(200px);
+    }
+    .right-door-close{
+        transform:translate(-200px);
+    }
+}
+

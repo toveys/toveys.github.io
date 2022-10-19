@@ -69,6 +69,7 @@ async function elevator(floor, filterByFloor, filterButton){
             }
             //Here I run through the level panels. I want them to change sequentially to give the 
             //illusion that the elevator is going up or down one floor at a time
+            
             //If the floor the user selects is less than the current floor run this script
             if(floor < currentFloor){
                 //I run through the array of level panels and set the previous level panel to no display
