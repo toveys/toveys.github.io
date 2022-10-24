@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="DomeCity" startnode="12" creator="Twine" creator-version="2.5.1" format="SugarCube" format-version="2.36.1" ifid="8FE9BABC-5B2A-4EED-A670-EDB7EBF72604" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">* {box-sizing: border-box;}
+	<tw-storydata name="DomeCity" startnode="8" creator="Twine" creator-version="2.5.1" format="SugarCube" format-version="2.36.1" ifid="8FE9BABC-5B2A-4EED-A670-EDB7EBF72604" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">* {box-sizing: border-box;}
 
 .img-magnifier-container, .img-magnifier-container * {
 	box-sizing: border-box;
@@ -357,11 +357,31 @@ a:hover{
 
 	/* Insert magnifier glass: */
 	img.parentElement.insertBefore(glass, img);
-};</script><tw-passagedata pid="1" name="cityentrance" tags="" position="500,575" size="100,100">&lt;span class=&quot;header&quot;&gt;Approaching the City Entrance&lt;/span&gt;
+};</script><tw-passagedata pid="1" name="cityentrance" tags="" position="500,575" size="100,100">&lt;div class=&quot;story-wrap&quot;&gt;\
+	&lt;div class=&quot;head-wrap&quot;&gt; \
+    	&lt;img src=&quot;images/b_outsidecity.jpg&quot; alt=&quot;desert outside city&quot; class=&quot;banner&quot; /&gt;\
+	&lt;/div&gt;\
+    &lt;div class=&quot;division&quot;&gt;&lt;/div&gt;\
+	&lt;div class=&quot;body-wrap&quot;&gt;\
+		&lt;div class=&quot;left-sidebar&quot;&gt;&lt;/div&gt;\
+		&lt;div class=&quot;content&quot;&gt;\
+        	&lt;div class=&quot;header&quot;&gt;At The City Entrance&lt;/div&gt;\
+        	&lt;p&gt;\
 You arrive at the western checkpoint, Gate 115. From here you can&#39;t see the top of the dome anymore, it towers above you. At least you feel a bit cooler in the shade it gives off, you won&#39;t need your reflective overcoat anymore. The line is long, only 2 bored guards man this checkpoint here. You glance to your left to see a polished stone and metal entrance. That entrance is not for people like you.
 
 Finally, you arrive at the front of the line. You give the guard your identiying documents. He types them up on his computer. Then he asks you the questions.
-[[&quot;Who Are you&quot;|pastchoice]]</tw-passagedata><tw-passagedata pid="2" name="Map" tags="" position="400,75" size="100,100">&lt;div class=&quot;map-header&quot;&gt;&lt;/div&gt;\
+			&lt;/p&gt;\
+            &lt;div class=&quot;links&quot;&gt;\
+            	&lt;div style=&quot;display:inline-block&quot; class=&quot;cardlesstext&quot;&gt;\
+                    &lt;div class=&quot;topic&quot;&gt;Choosing A Past&lt;/div&gt;\
+                    &lt;div class=&quot;click&quot;&gt;[[GO|pastchoice]]&lt;/div&gt;\
+                &lt;/div&gt;\
+            &lt;/div&gt;\
+		&lt;/div&gt;\
+        &lt;div class=&quot;right-sidebar&quot;&gt;\
+        &lt;/div&gt;\
+&lt;/div&gt;\
+&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="2" name="Map" tags="" position="400,75" size="100,100">&lt;div class=&quot;map-header&quot;&gt;&lt;/div&gt;\
 &lt;div class=&quot;map-container&quot;&gt;\  
   &lt;div class=&quot;map-link&quot;&gt;\
           &lt;div class=&quot;map-click&quot;&gt;&lt;&lt;link &quot;Back&quot;&gt;&gt;&lt;&lt;run Engine.backward()&gt;&gt;&lt;&lt;/link&gt;&gt;
@@ -436,7 +456,7 @@ Filler Text
 	&lt;div class=&quot;body-wrap&quot;&gt;\
 		&lt;div class=&quot;left-sidebar&quot;&gt;&lt;/div&gt;\
 		&lt;div class=&quot;content&quot;&gt;\
-        	&lt;div class=&quot;header&quot;&gt;Template&lt;/div&gt;\
+        	&lt;div class=&quot;header&quot;&gt;City Outside&lt;/div&gt;\
         	&lt;p&gt;\
 You stand outside of a massive domed city. You squint your eyes through the light glinting off the hexagonal plating. You can&#39;t quite make out anything inside the dome. its tinted glass obstructs your view. The magtrain hoots behind you as it rolls back through the smog it arrived from. You start walking towards the entrance checkpoint.
 			&lt;/p&gt;\
@@ -445,29 +465,57 @@ You stand outside of a massive domed city. You squint your eyes through the ligh
                &lt;div style=&quot;display:inline-block&quot; class=&quot;cardlesstext&quot;&gt;\
                     &lt;div class=&quot;topic&quot;&gt;Walk to the Gates&lt;/div&gt;\
                    You keep walking to the entrance gates
-                    [[GO|cityentrance]]
-                &lt;/div&gt;\
-                
-                &lt;div style=&quot;display:inline-block&quot; class=&quot;cardlesstext&quot;&gt;\
-                    &lt;div class=&quot;topic&quot;&gt;Template&lt;/div&gt;\
-                    [[GO|Template]]
+                    &lt;div class=&quot;click&quot;&gt;[[GO|cityentrance]]&lt;/div&gt;\
                 &lt;/div&gt;\
                 
             &lt;/div&gt;\
 		&lt;/div&gt;\
         &lt;div class=&quot;right-sidebar&quot;&gt;&lt;/div&gt;\
 &lt;/div&gt;\
-&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="8" name="pastchoice" tags="" position="650,575" size="100,100">&lt;span class=&quot;header&quot;&gt;Choosing a Past&lt;/span&gt;
-(This will affect your reputation with other groups.)
-
-[[A Minor Representative|AMinorRepresentative]]
-You came from the capital to inspect the city. You are outwardly friendly with the Council here, but they don&#39;t want you poking around too far. You will be a prime target for the gangs and disliked by the poor however. 
-[[A Maintainer|AMaintainer]]
-You recently graduated from the University and have come to help maintain the machines that run the city. Everything needs to be running like clockwork around here. You have a positive relationship with the Mechanic Guild but are disliked by some religious fanatics.
-[[A Marrow Thief|AMarrowThief]]
-You are a member of the Marrow Gang. You have come from a another city to act as a messenger and gather intel on this branch for the Boss. You have a positive relationship with the gangs here but are a wanted criminal. The guard doesn&#39;t know, you gave them fake papers.
-[[A Pilgrim|APilgrim]]
-You were on a religious pilgrimage. Now you are here at the end of your journey, the birthplace of your faith. You are liked by your Church but are disliked by the Council and the Maintainers.</tw-passagedata><tw-passagedata pid="9" name="cityexit" tags="" position="0,575" size="100,100">&lt;span class=&quot;header&quot;&gt;Passing Through the Gates&lt;/span&gt;
+&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="8" name="pastchoice" tags="" position="650,575" size="100,100">&lt;div class=&quot;story-wrap&quot;&gt;\
+	&lt;div class=&quot;head-wrap&quot;&gt; \
+    	&lt;img src=&quot;images/b_outsidecity.jpg&quot; alt=&quot;desert outside city&quot; class=&quot;banner&quot; /&gt;\
+	&lt;/div&gt;\
+    &lt;div class=&quot;division&quot;&gt;&lt;/div&gt;\
+	&lt;div class=&quot;body-wrap&quot;&gt;\
+		&lt;div class=&quot;left-sidebar&quot;&gt;&lt;/div&gt;\
+		&lt;div class=&quot;content&quot;&gt;\
+        	&lt;div class=&quot;header&quot;&gt;Choosing a Past&lt;/div&gt;\
+        	&lt;p&gt;\
+            	(This will affect your reputation with other groups.)
+			&lt;/p&gt;\
+            &lt;div class=&quot;links&quot;&gt;\
+            	&lt;div style=&quot;display:inline-block&quot; class=&quot;cardlesstext&quot;&gt;\
+                    &lt;div class=&quot;topic&quot;&gt;A Minor Representative&lt;/div&gt;\
+                   		You came from the capital to inspect the city. You are outwardly friendly with the Council here, but they don&#39;t want you poking around too far. You will be a prime target for the gangs and disliked by the poor however. 
+                    &lt;div class=&quot;click&quot;&gt;[[GO|AMinorRepresentative]]&lt;/div&gt;\
+                &lt;/div&gt;\
+                
+                &lt;div style=&quot;display:inline-block&quot; class=&quot;cardlesstext&quot;&gt;\
+                    &lt;div class=&quot;topic&quot;&gt;A Maintainer&lt;/div&gt;\
+						You recently graduated from the University and have come to help maintain the machines that run the city. Everything needs to be running like clockwork around here. You have a positive relationship with the Mechanic Guild but are disliked by some religious fanatics.
+                    &lt;div class=&quot;click&quot;&gt;[[GO|AMaintainer]]&lt;/div&gt;\
+                &lt;/div&gt;\
+                
+                 &lt;div style=&quot;display:inline-block&quot; class=&quot;cardlesstext&quot;&gt;\
+                    &lt;div class=&quot;topic&quot;&gt;A Marrow Thief&lt;/div&gt;\
+						You are a member of the Marrow Gang. You have come from a another city to act as a messenger and gather intel on this branch for the Boss. You have a positive relationship with the gangs here but are a wanted criminal. The guard doesn&#39;t know, you gave them fake papers.
+                    &lt;div class=&quot;click&quot;&gt;[[GO|AMarrowThief]]&lt;/div&gt;\
+                &lt;/div&gt;\
+                
+                                &lt;div style=&quot;display:inline-block&quot; class=&quot;cardlesstext&quot;&gt;\
+                    &lt;div class=&quot;topic&quot;&gt;A Marrow Thief&lt;/div&gt;\
+You were on a religious pilgrimage. Now you are here at the end of your journey, the birthplace of your faith. You are liked by your Church but are disliked by the Council and the Maintainers.
+                    &lt;div class=&quot;click&quot;&gt;[[GO|APilgrim]]&lt;/div&gt;\
+                &lt;/div&gt;\
+                
+                
+            &lt;/div&gt;\
+		&lt;/div&gt;\
+        &lt;div class=&quot;right-sidebar&quot;&gt;\
+        &lt;/div&gt;\
+&lt;/div&gt;\
+&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="9" name="cityexit" tags="" position="0,575" size="100,100">&lt;span class=&quot;header&quot;&gt;Passing Through the Gates&lt;/span&gt;
 
 You walk through the city to your designated exit gate. You can see it the distance.
 
