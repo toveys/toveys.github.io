@@ -407,7 +407,7 @@ Finally, you arrive at the front of the line. You give the guard your identiying
           &lt;/div&gt;\
           &lt;br&gt;
           &lt;div class=&quot;map-click&quot;&gt;[[Centre]]&lt;/div&gt;\
-          &lt;div class=&quot;map-click&quot;&gt;[[Luxco]]&lt;/div&gt;\
+          &lt;div class=&quot;map-click&quot;&gt;[[LuxCo]]&lt;/div&gt;\
           &lt;div class=&quot;map-click&quot;&gt;[[St. Henry&#39;s Flame]]&lt;/div&gt;\
           &lt;div class=&quot;map-click&quot;&gt;[[Outskirts]]&lt;/div&gt;\
           &lt;div class=&quot;map-click&quot;&gt;[[Suppression Bureau]]&lt;/div&gt;\
@@ -424,12 +424,17 @@ Finally, you arrive at the front of the line. You give the guard your identiying
 		&lt;div class=&quot;content&quot;&gt;\
         	&lt;div class=&quot;header&quot;&gt;Centre of The City&lt;/div&gt;\
         	&lt;p&gt;\
-					You arrive at the dead center of the city. In front of you is a massive red flower. The Monument to Our Fallen, their names are written on the petals. An extravagant work of art, it represents the heart of the city. Across from it stands the Council building, coated in a thick purple it is dominated by the LuxCO headquarters. It covers the sky with its angular walls and harsh white coating. You can see the cleaners working on the outside, they are always there, constantly scrubbing to maintain its gleaming facade. While not practical, they can afford it and it makes a statement.
+					You arrive at the dead center of the city. In front of you is a massive red flower. The Monument to Our Fallen, their names are written on the petals. An extravagant work of art, it represents the heart of the city. Some graffiti is written across the base, &quot;Never Forget their Slaughter&quot;. Across from it stands the Council building, coated in a thick purple it is dominated by the LuxCO headquarters. It covers the sky with its angular walls and harsh white coating. You can see the cleaners working on the outside, they are always there, constantly scrubbing to maintain its gleaming facade. While not practical, they can afford it and it makes a statement.
 			&lt;/p&gt;\
             &lt;div class=&quot;links&quot;&gt;\
        		&lt;div style=&quot;display:inline-block&quot; class=&quot;cardlesstext&quot;&gt;\
-                    &lt;div class=&quot;topic&quot;&gt;Examine Luxco Headquarters&lt;/div&gt;\
-                    &lt;div class=&quot;click&quot;&gt;[[GO|Luxco]]&lt;/div&gt;\
+                    &lt;div class=&quot;topic&quot;&gt;Examine The Monument&lt;/div&gt;\
+                    &lt;div class=&quot;click&quot;&gt;[[GO|closerlookmonument]]&lt;/div&gt;\
+                &lt;/div&gt;\
+                
+                &lt;div style=&quot;display:inline-block&quot; class=&quot;cardlesstext&quot;&gt;\
+                    &lt;div class=&quot;topic&quot;&gt;Go to LuxCo&lt;/div&gt;\
+                    &lt;div class=&quot;click&quot;&gt;[[GO|LuxCo]]&lt;/div&gt;\
                 &lt;/div&gt;\
             &lt;/div&gt;\
 		&lt;/div&gt;\
@@ -469,7 +474,7 @@ Filler Text
              &lt;/div&gt;\
         &lt;/div&gt;\
 &lt;/div&gt;\
-&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="5" name="St. Henry&#39;s Flame" tags="" position="150,75" size="100,100">&lt;div class=&quot;story-wrap&quot;&gt;\
+&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="5" name="St. Henry&#39;s Flame" tags="" position="75,75" size="100,100">&lt;div class=&quot;story-wrap&quot;&gt;\
 	&lt;div class=&quot;head-wrap&quot;&gt; \
     	&lt;img src=&quot;images/b_church.jpg&quot; alt=&quot;church&quot; class=&quot;banner&quot; /&gt;\
 	&lt;/div&gt;\
@@ -481,9 +486,10 @@ Filler Text
         	&lt;p&gt;\
 			&lt;/p&gt;\
             &lt;div class=&quot;links&quot;&gt;\
-       		&lt;div style=&quot;display:inline-block&quot; class=&quot;cardlesstext&quot;&gt;\
-                    &lt;div class=&quot;topic&quot;&gt;Examine The Church&lt;/div&gt;\
-                    &lt;div class=&quot;click&quot;&gt;[[GO|Church]]&lt;/div&gt;\
+       		       		&lt;div style=&quot;display:inline-block&quot; class=&quot;cardlesstext&quot;&gt;\
+                    &lt;div class=&quot;topic&quot;&gt;Go Back&lt;/div&gt;\
+                    &lt;div class=&quot;click&quot;&gt;&lt;&lt;link &quot;Back&quot;&gt;&gt;&lt;&lt;run Engine.backward()&gt;&gt;&lt;&lt;/link&gt;&gt;									
+                    &lt;/div&gt;\
                 &lt;/div&gt;\
             &lt;/div&gt;\
 		&lt;/div&gt;\
@@ -734,7 +740,7 @@ You are a Follower of the Flame. The Flame burns within everyone, giving them th
         &lt;div class=&quot;right-sidebar&quot;&gt;\
         &lt;/div&gt;\
 &lt;/div&gt;\
-&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="15" name="Luxco" tags="" position="475,325" size="100,100">&lt;div class=&quot;story-wrap&quot;&gt;\
+&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="15" name="LuxCo" tags="" position="475,325" size="100,100">&lt;div class=&quot;story-wrap&quot;&gt;\
 	&lt;div class=&quot;head-wrap&quot;&gt; \
     	&lt;img src=&quot;images/b_luxco.jpg&quot; alt=&quot;skyline&quot; class=&quot;banner&quot; /&gt;\
 	&lt;/div&gt;\
@@ -744,9 +750,13 @@ You are a Follower of the Flame. The Flame burns within everyone, giving them th
 		&lt;div class=&quot;content&quot;&gt;\
         	&lt;div class=&quot;header&quot;&gt;LuxCo&lt;/div&gt;\
         	&lt;p&gt;\
-
+					On closer inspection of the building you notice that it&#39;s angles are of such degrees that they catch all of the natural light streaming from the center skylight. Contributing to it&#39;s blinding white glow as if the paint and scrubbers weren&#39;t enough. You see little activity around the building however, other than some security guards at the entrance. You don&#39;t have time to enter the building now, perhaps in the future.
 			&lt;/p&gt;\
             &lt;div class=&quot;links&quot;&gt;\
+                   		&lt;div style=&quot;display:inline-block&quot; class=&quot;cardlesstext&quot;&gt;\
+                    &lt;div class=&quot;topic&quot;&gt;Go Back&lt;/div&gt;\
+                    &lt;div class=&quot;click&quot;&gt;&lt;&lt;link &quot;Back&quot;&gt;&gt;&lt;&lt;run Engine.backward()&gt;&gt;&lt;&lt;/link&gt;&gt;									
+                    &lt;/div&gt;\
             &lt;/div&gt;\
 		&lt;/div&gt;\
         &lt;div class=&quot;right-sidebar&quot;&gt;
@@ -824,7 +834,7 @@ You are a Follower of the Flame. The Flame burns within everyone, giving them th
         &lt;/div&gt;\
         &lt;/div&gt;\
 &lt;/div&gt;\
-&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="18" name="Church" tags="" position="25,75" size="100,100"></tw-passagedata><tw-passagedata pid="19" name="luxcotalk" tags="" position="975,325" size="100,100"> &lt;div class=&quot;story-wrap&quot;&gt;\
+&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="18" name="luxcotalk" tags="" position="975,325" size="100,100"> &lt;div class=&quot;story-wrap&quot;&gt;\
 	&lt;div class=&quot;head-wrap&quot;&gt; \
     	&lt;img src=&quot;./images/b_undergates.jpg&quot; alt=&quot;undergates&quot; class=&quot;banner&quot; /&gt;\
 	&lt;/div&gt;\
@@ -864,7 +874,7 @@ You are a Follower of the Flame. The Flame burns within everyone, giving them th
         &lt;/div&gt;\
         &lt;/div&gt;\
 &lt;/div&gt;\
-&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="20" name="flowertalk" tags="" position="825,200" size="100,100">&lt;div class=&quot;story-wrap&quot;&gt;\
+&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="19" name="flowertalk" tags="" position="825,200" size="100,100">&lt;div class=&quot;story-wrap&quot;&gt;\
 	&lt;div class=&quot;head-wrap&quot;&gt; \
     	&lt;img src=&quot;./images/b_undergates.jpg&quot; alt=&quot;undergates&quot; class=&quot;banner&quot; /&gt;\
 	&lt;/div&gt;\
@@ -904,7 +914,7 @@ You are a Follower of the Flame. The Flame burns within everyone, giving them th
         &lt;/div&gt;\
         &lt;/div&gt;\
 &lt;/div&gt;\
-&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="21" name="churchtalk" tags="" position="825,325" size="100,100">&lt;div class=&quot;story-wrap&quot;&gt;\
+&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="20" name="churchtalk" tags="" position="825,325" size="100,100">&lt;div class=&quot;story-wrap&quot;&gt;\
 	&lt;div class=&quot;head-wrap&quot;&gt; \
     	&lt;img src=&quot;./images/b_undergates.jpg&quot; alt=&quot;undergates&quot; class=&quot;banner&quot; /&gt;\
 	&lt;/div&gt;\
@@ -944,7 +954,7 @@ You are a Follower of the Flame. The Flame burns within everyone, giving them th
         &lt;/div&gt;\
         &lt;/div&gt;\
 &lt;/div&gt;\
-&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="22" name="bureautalk" tags="" position="975,200" size="100,100">&lt;div class=&quot;story-wrap&quot;&gt;\
+&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="21" name="bureautalk" tags="" position="975,200" size="100,100">&lt;div class=&quot;story-wrap&quot;&gt;\
 	&lt;div class=&quot;head-wrap&quot;&gt; \
     	&lt;img src=&quot;./images/b_undergates.jpg&quot; alt=&quot;undergates&quot; class=&quot;banner&quot; /&gt;\
 	&lt;/div&gt;\
@@ -984,7 +994,7 @@ You are a Follower of the Flame. The Flame burns within everyone, giving them th
         &lt;/div&gt;\
         &lt;/div&gt;\
 &lt;/div&gt;\
-&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="23" name="beggarafter" tags="" position="875,50" size="100,100">&lt;div class=&quot;story-wrap&quot;&gt;\
+&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="22" name="beggarafter" tags="" position="875,50" size="100,100">&lt;div class=&quot;story-wrap&quot;&gt;\
 	&lt;div class=&quot;head-wrap&quot;&gt; \
     	&lt;img src=&quot;./images/b_undergates.jpg&quot; alt=&quot;undergates&quot; class=&quot;banner&quot; /&gt;\
 	&lt;/div&gt;\
@@ -1006,6 +1016,32 @@ You are a Follower of the Flame. The Flame burns within everyone, giving them th
             	[[Travel|Map]]
              &lt;/div&gt;\
         &lt;/div&gt;\
+        &lt;/div&gt;\
+&lt;/div&gt;\
+&lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;\</tw-passagedata><tw-passagedata pid="23" name="closerlookmonument" tags="" position="325,450" size="100,100">&lt;div class=&quot;story-wrap&quot;&gt;\
+	&lt;div class=&quot;head-wrap&quot;&gt; \
+    	&lt;img src=&quot;images/b_flower.jpg&quot; alt=&quot;flower&quot; class=&quot;banner&quot; /&gt;\
+	&lt;/div&gt;\
+    &lt;div class=&quot;division&quot;&gt;&lt;/div&gt;\
+	&lt;div class=&quot;body-wrap&quot;&gt;\
+		&lt;div class=&quot;left-sidebar&quot;&gt;&lt;/div&gt;\
+		&lt;div class=&quot;content&quot;&gt;\
+        	&lt;div class=&quot;header&quot;&gt;Closer Inspection of the Monument&lt;/div&gt;\
+        	&lt;p&gt;\
+						Hundred of names are written across the petals. The plaque reads, &quot;In memory of their brave sacrifice as they restored order against the forces that would bring down this city.&quot; No riot is mentioned or any of the innocents killed in the war. You see names scratched out, you can only assume that the surviving protestors had grudges against these people.
+			&lt;/p&gt;\
+            &lt;div class=&quot;links&quot;&gt;\
+       		&lt;div style=&quot;display:inline-block&quot; class=&quot;cardlesstext&quot;&gt;\
+                    &lt;div class=&quot;topic&quot;&gt;Go Back&lt;/div&gt;\
+                    &lt;div class=&quot;click&quot;&gt;&lt;&lt;link &quot;Back&quot;&gt;&gt;&lt;&lt;run Engine.backward()&gt;&gt;&lt;&lt;/link&gt;&gt;									
+                    &lt;/div&gt;\
+                &lt;/div&gt;\
+            &lt;/div&gt;\
+		&lt;/div&gt;\
+        &lt;div class=&quot;right-sidebar&quot;&gt;
+        &lt;div class=&quot;travel&quot;&gt;\
+            	[[Travel|Map]]
+             &lt;/div&gt;\
         &lt;/div&gt;\
 &lt;/div&gt;\
 &lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;\</tw-passagedata></tw-storydata>
