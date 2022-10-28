@@ -35,7 +35,7 @@ body {
 .body-wrap{
   display: grid;
   grid-area:body-wrap;
-  grid-template-columns: 15% 60% 25%;
+  grid-template-columns: 10% 60% 30%;
   grid-template-areas:
     "left-sidebar content right-sidebar";
 }
@@ -75,6 +75,7 @@ body {
 }
 .subheader{
     margin-left:33%;
+    margin-bottom: 10px;
   }
 .left-sidebar{
   grid-area: left-sidebar;
@@ -122,10 +123,12 @@ body {
 }
 p{
   margin:10px;
+  line-height: 1.5;
 }
 .footer{
   grid-area: footer;
   background-color:#1d1d1d;
+  margin:30px;
 }
 a{
   color:#f5f7be;
@@ -137,4 +140,28 @@ a:hover{
 }
 p{
     margin-left: 50px;
+}
+.image-showcase{
+  height: 200px;
+  width: 300px;
+  margin:auto;
+  margin-top:30px;
+  color:#E6E3D3;
+}
+.image-showcase2{
+  height: 300px;
+  width: 200px;
+  margin:auto;
+  margin-top:30px;
+  color:#E6E3D3;
+}
+#image-showcase{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#image-showcase2{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
